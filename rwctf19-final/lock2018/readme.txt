@@ -1,40 +1,23 @@
+Lock2018
 Score: 500
 
-Background:
+You are given a COTS (commercial off-the-shelf) lock, running our home-brewed firmware, w/ web management (please login with whatever username, and your team token as password). You are also given some necessary tools including screw driver, debugger, RF transceiver and wires. See the attachment for document and demo code for RF transceiver.
 
-Hi there, my agent said a smart guy ´_>` solved my challenge last year, which successfully caught my attention. | ᐕ)⁾⁾
+Please demonstrate opening the door on the stage. (You are not allowed to access the key hole / micro USB port on the stage)
 
-But that was just a starter. You won't expect to 'win my heart' with only an appetizer would you?
+PS: The voice output of the lock is Chinese only. Here is an incomplete list of their Pin-Yin pronunciation with English translation. If you have any problem understanding Chinese, feel free to ask.
 
-This year I'll be serious about the challenge, and the gaming environment will (hopefully ( ‾◡‾)) be more robust and player-friendly.
-
-Let me present you the next generation of smart contract proxy - MONica's TAG-based proxY - Montagy!
-
-Try solve any of the puzzles and empty the proxy balance.
-
-Enjoy!
-
-Description:
-
-    Web3 http provider to access the private chain (geth): http://172.16.27.100:8090/<md5(YOUR_TEAM_TOKEN)>/
-
-    Target contract address: 0xd068fcc44525569fb593189c8f22827cf0f50f3f
-
-    Once the balance of the target contract address equals 0, the backend will send the flagdata in a new tx
-
-Info:
-
-    genesis.json, player-privkey.txt and a sample docker(exactly the same except for flag, for debug only) are provided.
-
-    Don't scan port 8090, there's no other api.
-
-    Don't scan ports, there's no other open ports related to this challenge.
-
-Hint:
-
-An identical environment has been deployed on ropsten: https://ropsten.etherscan.io/address/0xd068fcc44525569fb593189c8f22827cf0f50f3f
-
-But this is only to help you understand the situation, DON'T INTERACT WITH THIS ADDRESS during the contest.
+    Yǐ liánjiē: connected
+    Mìmǎ zhèngquè: correct password
+    Mìmǎ cuòwù: wrong password"
 
 Attachment
+
+update:
+
+Additional Information for Lock Challenges
+
+You can find an SPI module (yellow color, 18.1mm * 22.1mm) on the main PCB, labeled as "HJ-WL433-IP1". Since there's no English datasheet available for this module, we would like to provide necessary information here.
+
+This is a radio module based on SI4438 transceiver, w/ 26 MHz oscillator.
 
