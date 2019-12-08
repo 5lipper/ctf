@@ -38,3 +38,13 @@ But this is only to help you understand the situation, DON'T INTERACT WITH THIS 
 
 Attachment
 
+
+Montagy - Situation Update
+Posted on 2019-12-08 08:56:09(+08:00)
+
+Right before the end of yesterday, all the Montagy game servers went down. I've restarted all the servers, the chain data should be REMAIN THE SAME, if you observe any further problem, please reach out to the IT support station.
+
+BTW, since the block height kept growning before and during the repair last night, I'll provide additional information to keep us in the same page.
+
+The block height was around 26650 when the repairment start.
+
