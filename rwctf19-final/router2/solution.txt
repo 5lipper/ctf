@@ -1,0 +1,19 @@
+login shell of user `pwn` is changed to `/bin/dsh`. x.py exploits an oob
+write bug to bypass the authentication and changes default login shell to
+`/bin/ash`. After that we are able to login in ssh and copy more payloads
+for next step.
+
+`/usr/sbin/wpa_cli` has setuid bit enabled and it's owned by root. wpa_cli
+accepts a parameter `action script` to handle event from control socket.
+
+`hehe` (hehe.c) binds a unix socket at /tmp/haha and serves as the control
+socket provider. Run `wpa_cli -g /tmp/haha -a /tmp/lol` then `lol` will be
+executed with euid=0.
+
+Since /tmp/ is mount as nosuid, we have to modify existing binaries on the
+router. In `lol` we have add setuid bit to /bin/ash. Login as `pwn` again
+we will have euid/egid=0.
+
+The demo requires hijacking realworldctf.com to our own website. We need to
+run setuid&&setgid to becomre real root in order to edit /etc/hosts.
+
